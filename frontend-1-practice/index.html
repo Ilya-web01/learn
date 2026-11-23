@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Выбор даты и времени для записи в барбершоп">
+  <title>Барбершоп — выбор даты и времени</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page">
+  <div class="page__shell">
+    <header class="site-header">
+      <a class="site-header__brand" href="#main" aria-label="Барбершоп — к выбору даты">NORTH<span class="site-header__brand-accent">CUT</span></a>
+      <span class="site-header__step">ШАГ 3 ИЗ 4</span>
+    </header>
+
+    <main class="booking" id="main">
+      <div class="booking__intro">
+        <p class="booking__eyebrow">ОНЛАЙН-ЗАПИСЬ</p>
+        <h1 class="booking__title">Выберите дату и время</h1>
+        <p class="booking__description">Выберите удобный день и свободное время для визита.</p>
+      </div>
+
+      <div class="booking__layout">
+        <section class="panel calendar" aria-labelledby="calendar-title">
+          <div class="calendar__heading">
+            <h2 class="panel__title" id="calendar-title">Июнь 2026</h2>
+            <span class="calendar__hint">Выберите день</span>
+          </div>
+          <div class="calendar__weekdays" aria-hidden="true">
+            <span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+          </div>
+          <div class="calendar__days" role="group" aria-label="Даты июня 2026">
+            <button class="calendar__day" type="button" data-day="1">1</button>
+            <button class="calendar__day" type="button" data-day="2">2</button>
+            <button class="calendar__day" type="button" data-day="3">3</button>
+            <button class="calendar__day" type="button" data-day="4">4</button>
+            <button class="calendar__day" type="button" data-day="5">5</button>
+            <button class="calendar__day" type="button" data-day="6">6</button>
+            <button class="calendar__day" type="button" data-day="7">7</button>
+            <button class="calendar__day" type="button" data-day="8">8</button>
+            <button class="calendar__day" type="button" data-day="9">9</button>
+            <button class="calendar__day" type="button" data-day="10">10</button>
+            <button class="calendar__day" type="button" data-day="11">11</button>
+            <button class="calendar__day" type="button" data-day="12">12</button>
+            <button class="calendar__day" type="button" data-day="13">13</button>
+            <button class="calendar__day" type="button" data-day="14">14</button>
+            <button class="calendar__day" type="button" data-day="15">15</button>
+            <button class="calendar__day" type="button" data-day="16">16</button>
+            <button class="calendar__day" type="button" data-day="17">17</button>
+            <button class="calendar__day calendar__day--selected" type="button" data-day="18" aria-pressed="true">18</button>
+            <button class="calendar__day" type="button" data-day="19">19</button>
+            <button class="calendar__day" type="button" data-day="20">20</button>
+            <button class="calendar__day" type="button" data-day="21">21</button>
+            <button class="calendar__day" type="button" data-day="22">22</button>
+            <button class="calendar__day" type="button" data-day="23">23</button>
+            <button class="calendar__day" type="button" data-day="24">24</button>
+            <button class="calendar__day" type="button" data-day="25">25</button>
+            <button class="calendar__day" type="button" data-day="26">26</button>
+            <button class="calendar__day" type="button" data-day="27">27</button>
+            <button class="calendar__day" type="button" data-day="28">28</button>
+            <button class="calendar__day" type="button" data-day="29">29</button>
+            <button class="calendar__day" type="button" data-day="30">30</button>
+          </div>
+        </section>
+
+        <section class="panel slots" aria-labelledby="slots-title">
+          <h2 class="panel__title slots__date" id="slots-title">Четверг, 18 июня</h2>
+          <p class="slots__caption">Доступное время</p>
+          <div class="slots__grid" role="group" aria-label="Время записи">
+            <button class="slots__time" type="button">10:00</button>
+            <button class="slots__time" type="button">11:30</button>
+            <button class="slots__time" type="button">13:00</button>
+            <button class="slots__time" type="button">14:30</button>
+            <button class="slots__time slots__time--busy" type="button" disabled title="Время занято">16:00 <span class="slots__busy-label">занято</span></button>
+            <button class="slots__time" type="button">17:30</button>
+            <button class="slots__time" type="button">19:00</button>
+            <button class="slots__time slots__time--busy" type="button" disabled title="Время занято">20:00 <span class="slots__busy-label">занято</span></button>
+          </div>
+          <p class="slots__note">Занятые слоты отмечены серым цветом.</p>
+        </section>
+      </div>
+
+      <footer class="booking__footer">
+        <p class="booking__selection" id="selection-status" aria-live="polite">Дата: 18 июня · Выберите время</p>
+        <button class="booking__next" id="next-button" type="button" disabled>ДАЛЕЕ <span aria-hidden="true">→</span></button>
+      </footer>
+    </main>
+    <footer class="site-footer">BARBERBOOK · Онлайн-запись</footer>
+  </div>
+</body>
+</html>
