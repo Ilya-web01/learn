@@ -1,0 +1,5 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import mockBookingServer from './server/server.js';
+
+export default defineConfig({ plugins: [react(), mockBookingServer()], server: { port: 3000 } });
