@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Выбор даты и времени для записи в барбершоп">
+  <title>Барбершоп — выбор даты и времени</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page">
+  <div class="page__shell">
+    <header class="site-header">
+      <a class="site-header__brand" href="#main" aria-label="Барбершоп — к выбору даты">NORTH<span class="site-header__brand-accent">CUT</span></a>
+      <span class="site-header__step">ШАГ 3 ИЗ 4</span>
+    </header>
+
+    <main class="booking" id="main">
+      <div class="booking__intro">
+        <p class="booking__eyebrow">ОНЛАЙН-ЗАПИСЬ</p>
+        <h1 class="booking__title">Выберите дату и время</h1>
+        <p class="booking__description">Выберите удобный день и свободное время для визита.</p>
+      </div>
+
+      <div class="booking__layout">
+        <section class="panel calendar" aria-labelledby="calendar-title">
+          <div class="calendar__heading">
+            <h2 class="panel__title" id="calendar-title">Июнь 2026</h2>
+            <div class="calendar__navigation" aria-label="Переключение месяцев">
+              <button class="calendar__arrow" id="prev-month" type="button" aria-label="Предыдущий месяц">‹</button>
+              <button class="calendar__arrow" id="next-month" type="button" aria-label="Следующий месяц">›</button>
+            </div>
+          </div>
+          <div class="calendar__weekdays" aria-hidden="true">
+            <span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+          </div>
+          <div class="calendar__days" id="calendar-days" role="group" aria-label="Даты месяца"></div>
+        </section>
+
+        <section class="panel slots" aria-labelledby="slots-title">
+          <h2 class="panel__title slots__date" id="slots-title">Четверг, 18 июня</h2>
+          <p class="slots__caption">Доступное время</p>
+          <div class="slots__grid" id="time-slots" role="group" aria-label="Время записи"></div>
+          <p class="slots__note">Занятые слоты отмечены серым цветом.</p>
+        </section>
+      </div>
+
+      <footer class="booking__footer">
+        <p class="booking__selection" id="selection-status" aria-live="polite">Дата и время загрузятся автоматически</p>
+        <button class="booking__next" id="next-button" type="button" disabled>ДАЛЕЕ <span aria-hidden="true">→</span></button>
+      </footer>
+    </main>
+    <footer class="site-footer">NORTHCUT · Онлайн-запись</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
